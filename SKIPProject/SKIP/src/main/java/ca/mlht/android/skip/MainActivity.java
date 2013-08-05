@@ -9,21 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.ProgressDialog;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-import com.android.volley.RequestQueue;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends Activity {
 
@@ -38,7 +27,7 @@ public class MainActivity extends Activity {
             public void callback(HashMap<String, String> results) {
                 if(results.get("exists")=="true"){
                     TextView api_view = (TextView)findViewById(R.id.api_key_view);
-                    api_view.setText(results.get("api_jey"));
+                    api_view.setText(results.get("api_key"));
                     Button unregister =  (Button)findViewById(R.id.unregister_button);
                     unregister.setEnabled(true);
                 }else{
@@ -52,7 +41,27 @@ public class MainActivity extends Activity {
     }
 
     public void onRegisterDeviceClicked (View v){
+        final Button register =  (Button)findViewById(R.id.register_button);
+        final Button unregister =  (Button)findViewById(R.id.unregister_button);
+        final ProgressDialog dialog = new ProgressDialog(this);
+        final TextView api_view = (TextView)findViewById(R.id.api_key_view);
+        dialog.setCancelable(false);
+        dialog.show();
+        register.setEnabled(false);
 
+        apiHandler.registerDevice(new AsyncReturn() {
+            @Override
+            public void callback(HashMap<String, String> results) {
+                dialog.cancel();
+                if(results.get("success")!="true"){
+                    Toast.makeText(getApplicationContext(),"Failed to Register",Toast.LENGTH_LONG).show();
+                    register.setEnabled(true);
+                }else{
+                    api_view.setText(results.get("api_key"));
+                    unregister.setEnabled(true);
+                }
+            }
+        });
     }
 
     @Override

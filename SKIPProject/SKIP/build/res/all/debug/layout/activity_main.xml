@@ -40,7 +40,7 @@
                 android:focusable="false"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:onClick="onRegisterDeviceClick"/>
+                android:onClick="onRegisterDeviceClicked"/>
 
         <Button
                 android:layout_width="wrap_content"

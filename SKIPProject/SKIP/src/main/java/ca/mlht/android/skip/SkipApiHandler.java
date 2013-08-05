@@ -1,7 +1,9 @@
 package ca.mlht.android.skip;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.provider.Settings;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,12 +16,16 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.android.volley.RequestQueue;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * Created by marc on 04/08/13.
  */
@@ -33,14 +39,13 @@ public class SkipApiHandler {
     public SkipApiHandler(Context context){
         this.context = context;
         queue = Volley.newRequestQueue(context);
-
+        device_id = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
     //Returns a hash map containing two keys
     //exists -> "true" or "false" device exists on server
     //api_key -> if exists = "true", contains the api key for the device
     public void checkIfDeviceRegistered(final AsyncReturn returnMethod){
-        device_id = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         final HashMap<String,String> results;
         results = new HashMap<String, String>();
         JsonArrayRequest deviceCheck = new JsonArrayRequest(url+"/devices?device_id="+device_id,new Response.Listener<JSONArray>(){
@@ -49,12 +54,15 @@ public class SkipApiHandler {
                 if(response.length() != 0 ){
                     try{
                         String api_key = response.getJSONObject(0).getString("api_key");
+                        String gcm_id = response.getJSONObject(0).getString("gcm_id");
                         results.put("exists","true");
+                        Log.v("API KEY: ","api_key");
                         results.put("api_key",api_key);
+                        results.put("gcm_id",gcm_id);
                         returnMethod.callback(results);
                     }catch(Exception e){}
                 }else{
-                    results.put("exists","false");
+                    results.put("exists", "false");
                     returnMethod.callback(results);
                 }
             }
@@ -73,6 +81,78 @@ public class SkipApiHandler {
     //success -> "true" or "false"
     //api_key -> the api key (if successful)
     public void registerDevice(final AsyncReturn returnMethod){
-        
+        new AsyncTask<Void,Void,String>(){
+            @Override
+            protected String doInBackground(Void... null_params){
+
+                String registration_id;
+
+                GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(context);
+                //Attempt to register with GCM
+                try {
+                    return gcm.register("36373224589");
+                } catch (IOException e) {
+                    Log.e("GCM Registration Failure", "GCM Failed to Register");
+                    e.printStackTrace();
+                    return "";
+                }
+
+
+            }
+
+            @Override
+            protected void onPostExecute(String reg_id){
+                final HashMap<String,String> results;
+                results = new HashMap<String, String>();
+
+                //Check for failure
+                if(reg_id == ""){
+                    results.put("success","false");
+                    returnMethod.callback(results);
+                    return;
+                }
+
+                //Construct Parameters
+
+                JSONObject params = new JSONObject();
+                try{
+                    params.put("device_id",device_id);
+                    params.put("gcm_id",reg_id);
+                }catch(JSONException e){
+                    results.put("success","false");
+                    Log.e("JSON Failure","JSON Failure");
+                    returnMethod.callback(results);
+                    return;
+                }
+
+                Log.e("Progress","Sending Results");
+                //Send registration to SKIP server
+                JsonArrayPostRequest registration_request = new JsonArrayPostRequest(url+"/devices",params,new Response.Listener<JSONArray>(){
+                    @Override
+                    public void onResponse (JSONArray response){
+                        Log.v("Debug","Successful Network Response");
+                        try{
+                            results.put("success","true");
+                            results.put("api_key",response.getJSONObject(0).getString("api_key"));
+                            returnMethod.callback(results);
+                        }catch (Exception e){
+                            results.put("success","false");
+                            Log.e("JSON Failure","JSON Failure");
+                            returnMethod.callback(results);
+                        }
+                    }
+                },new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        results.put("success","false");
+                        Log.e("Network Failure","Network Failure");
+                        Log.e("Network Failure",error.getMessage());
+                        returnMethod.callback(results);
+                    }
+                });
+                queue.add(registration_request);
+            }
+
+        }.execute(null,null,null);
     }
 }

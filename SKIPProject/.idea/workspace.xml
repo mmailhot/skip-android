@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="" />
+        <option name="name" value="Unnamed-0" />
+        <option name="packageNamePattern" value="ca.mlht.android.skip" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState />
@@ -25,19 +37,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa1d1996-4ccd-475b-9db5-506e27fce180" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/volley.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SKIP/src/main/res/drawable-nodpi/background.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/SKIP/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java" afterPath="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/SKIP.iml" afterPath="$PROJECT_DIR$/SKIP/SKIP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIPProject.iml" afterPath="$PROJECT_DIR$/SKIPProject.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java" afterPath="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/build/res/all/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/SKIP/build/res/all/debug/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/SKIP/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/build.gradle" afterPath="$PROJECT_DIR$/SKIP/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/SKIP/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKIP/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/SKIP/build/res/all/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SKIP.iws" />
@@ -102,10 +105,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gradlew.bat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <file leaf-file-name="SkipApiHandler.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+            <state line="151" column="19" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.70364743" vertical-offset="1802" max-vertical-offset="2460">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1706#2550#0" expanded="true" />
+                <element signature="e#2539#2540#0" expanded="true" />
+                <element signature="e#2551#2849#0" expanded="true" />
+                <element signature="e#2838#2839#0" expanded="true" />
+                <element signature="e#4777#5522#0" expanded="true" />
+                <element signature="e#5503#5504#0" expanded="true" />
+                <element signature="e#5523#5941#0" expanded="true" />
+                <element signature="e#5922#5923#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonArrayRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonArrayRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="0" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonArrayPostRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/JsonArrayPostRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="750">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="22" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonObjectRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonObjectRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="80" selection-start="1827" selection-end="1880" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -114,53 +165,29 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="47" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="1065">
+            <state line="26" column="67" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1155">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1015#1651#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
+                <element signature="e#1849#2373#0" expanded="true" />
+                <element signature="e#2362#2363#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkipApiHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java">
+      <file leaf-file-name="TextView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/widget/TextView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="8" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1260">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1537#2185#0" expanded="true" />
-                <element signature="e#2174#2175#0" expanded="true" />
-                <element signature="e#2186#2484#0" expanded="true" />
-                <element signature="e#2473#2474#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="99" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="1371" column="30" selection-start="53702" selection-end="53702" vertical-scroll-proportion="0.0" vertical-offset="25701" max-vertical-offset="134385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SKIP/build.gradle">
+      <file leaf-file-name="GCMRegistrationHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/GCMRegistrationHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AsyncReturn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/AsyncReturn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+            <state line="6" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -178,10 +205,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SKIP/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="34" selection-start="345" selection-end="345" vertical-scroll-proportion="0.25075987" vertical-offset="0" max-vertical-offset="658">
+            <state line="11" column="34" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -246,13 +273,17 @@
         <option value="$PROJECT_DIR$/SKIP/src/volley/toolbox/Volley.java" />
         <option value="$PROJECT_DIR$/SKIP/src/com.android.volley/toolbox/Volley.java" />
         <option value="$PROJECT_DIR$/SKIP/src/main/java/volley/ServerError.java" />
-        <option value="$PROJECT_DIR$/SKIP/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/AsyncReturn.java" />
-        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java" />
-        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/SKIP/build.gradle" />
         <option value="$PROJECT_DIR$/SKIP/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/GCMRegistrationHandler.java" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/GCMRegistrationHelper.java" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonArrayRequest.java" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/JsonArrayPostRequest.java" />
+        <option value="$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java" />
       </list>
     </option>
   </component>
@@ -299,6 +330,72 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SKIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComGoogleAndroidGmsPlayServices3136.aar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SKIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComGoogleAndroidGmsPlayServices3136.aar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SKIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComGoogleAndroidGmsPlayServices3136.aar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -426,6 +523,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SKIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SKIPProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SKIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="volley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toolbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -796,36 +931,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="925" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="58" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/os/Bundle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="25305" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="46" selection-start="156" selection-end="156" vertical-scroll-proportion="0.04784689" vertical-offset="0" max-vertical-offset="627" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="34" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../volley/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="29" selection-start="401" selection-end="401" vertical-scroll-proportion="-1.231003" vertical-offset="990" max-vertical-offset="2550" />
@@ -836,51 +941,10 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/AsyncReturn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="1065">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1015#1651#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="8" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1260">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1537#2185#0" expanded="true" />
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2186#2484#0" expanded="true" />
-            <element signature="e#2473#2474#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,10 +962,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SKIP/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="345" selection-end="345" vertical-scroll-proportion="0.25075987" vertical-offset="0" max-vertical-offset="658">
+        <state line="11" column="34" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="32" column="8" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/GCMRegistrationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="67" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1155">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1849#2373#0" expanded="true" />
+            <element signature="e#2362#2363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-18/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1371" column="30" selection-start="53702" selection-end="53702" vertical-scroll-proportion="0.0" vertical-offset="17826" max-vertical-offset="134385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonObjectRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="80" selection-start="1827" selection-end="1880" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="22" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/JsonArrayPostRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="750">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/com/android/volley/toolbox/JsonArrayRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SKIP/src/main/java/ca/mlht/android/skip/SkipApiHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="19" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.70364743" vertical-offset="1802" max-vertical-offset="2460">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1706#2550#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
+            <element signature="e#2551#2849#0" expanded="true" />
+            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#4777#5522#0" expanded="true" />
+            <element signature="e#5503#5504#0" expanded="true" />
+            <element signature="e#5523#5941#0" expanded="true" />
+            <element signature="e#5922#5923#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
