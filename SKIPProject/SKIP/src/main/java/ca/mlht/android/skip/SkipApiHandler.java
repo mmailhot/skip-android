@@ -4,11 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.provider.Settings;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -23,8 +20,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by marc on 04/08/13.
@@ -127,7 +124,7 @@ public class SkipApiHandler {
 
                 Log.e("Progress","Sending Results");
                 //Send registration to SKIP server
-                JsonArrayPostRequest registration_request = new JsonArrayPostRequest(url+"/devices",params,new Response.Listener<JSONArray>(){
+                JsonArrayRequestWithMethod registration_request = new JsonArrayRequestWithMethod(Request.Method.POST, url+"/devices",params,new Response.Listener<JSONArray>(){
                     @Override
                     public void onResponse (JSONArray response){
                         Log.v("Debug","Successful Network Response");
@@ -154,5 +151,54 @@ public class SkipApiHandler {
             }
 
         }.execute(null,null,null);
+    }
+
+    //Returns a hash map containing
+    //success -> "true" or "false"
+    public void unregisterDevice(String api_key,final AsyncReturn returnMethod){
+        final HashMap<String,String> results;
+        results = new HashMap<String, String>();
+
+        //Construct Parameters
+        final JSONObject params = new JSONObject();
+        try
+        {
+            params.put("device_id",device_id);
+        }catch(JSONException e){
+            Log.e("JSON Error","JSON Error");
+        }
+
+        JsonObjectRequest unregister_request = new JsonObjectRequest(Request.Method.POST,url+"/devices/"+api_key+"/delete",params,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.v("Response from Delete Server","Success");
+                try{
+                    if(response.getBoolean("success")){
+                        results.put("success","true");
+                    }else{
+                        results.put("success","false");
+                    }
+
+                }
+                catch(JSONException e){
+                    results.put("success","false");
+                }
+                returnMethod.callback(results);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error){
+                Log.v("Response from Delete Server","Failure");
+                Log.e("Volley Error",error.getMessage());
+                results.put("success","false");
+                returnMethod.callback(results);
+            }
+
+        });
+
+        Log.e("Body",new String(unregister_request.getBody()));
+        queue.add(unregister_request);
+
+
     }
 }

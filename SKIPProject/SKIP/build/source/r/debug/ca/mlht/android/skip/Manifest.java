@@ -9,6 +9,6 @@ package ca.mlht.android.skip;
 
 public final class Manifest {
     public static final class permission {
-        public static final String C2D_MESSAGE="ca.mlht.skip.android.permission.C2D_MESSAGE";
+        public static final String C2D_MESSAGE="ca.mlht.android.skip.permission.C2D_MESSAGE";
     }
 }

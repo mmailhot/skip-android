@@ -17,6 +17,7 @@ import java.util.HashMap;
 public class MainActivity extends Activity {
 
     private SkipApiHandler apiHandler;
+    private String api_key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
             public void callback(HashMap<String, String> results) {
                 if(results.get("exists")=="true"){
                     TextView api_view = (TextView)findViewById(R.id.api_key_view);
+                    api_key = results.get("api_key");
                     api_view.setText(results.get("api_key"));
                     Button unregister =  (Button)findViewById(R.id.unregister_button);
                     unregister.setEnabled(true);
@@ -57,9 +59,34 @@ public class MainActivity extends Activity {
                     Toast.makeText(getApplicationContext(),"Failed to Register",Toast.LENGTH_LONG).show();
                     register.setEnabled(true);
                 }else{
+                    api_key = results.get("api_key");
                     api_view.setText(results.get("api_key"));
                     unregister.setEnabled(true);
                 }
+            }
+        });
+    }
+
+    public void onUnregisterDeviceClicked (View v){
+        final Button register =  (Button)findViewById(R.id.register_button);
+        final Button unregister =  (Button)findViewById(R.id.unregister_button);
+        final ProgressDialog dialog = new ProgressDialog(this);
+        final TextView api_view = (TextView)findViewById(R.id.api_key_view);
+        dialog.setCancelable(false);
+        dialog.show();
+        unregister.setEnabled(false);
+        apiHandler.unregisterDevice(api_key,new AsyncReturn() {
+            @Override
+            public void callback(HashMap<String, String> results) {
+                dialog.cancel();
+                if(results.get("success")!="true"){
+                    Toast.makeText(getApplicationContext(),"Failed to Unregister",Toast.LENGTH_LONG).show();
+                    unregister.setEnabled(true);
+                    return;
+                }
+                api_view.setText("");
+                api_key = "";
+                register.setEnabled(true);
             }
         });
     }

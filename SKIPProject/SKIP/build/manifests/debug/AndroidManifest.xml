@@ -10,10 +10,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <receiver android:name="ca.mlht.android.skip.NotificationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="ca.mlht.android.skip"/>
+            </intent-filter>
+        </receiver>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-    <permission android:name="ca.mlht.skip.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
-    <uses-permission android:name="ca.mlht.skip.android.permission.C2D_MESSAGE"/>
+    <permission android:name="ca.mlht.android.skip.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="ca.mlht.android.skip.android.permission.C2D_MESSAGE"/>
 </manifest>

@@ -50,7 +50,8 @@
                 android:clickable="true"
                 android:enabled="false"
                 android:focusable="true"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:onClick="onUnregisterDeviceClicked"/>
 
     </LinearLayout>
 

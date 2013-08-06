@@ -16,16 +16,17 @@ import java.util.Map;
 /**
  * Created by marc on 04/08/13.
  */
-public class JsonArrayPostRequest extends JsonRequest<JSONArray> {
+public class JsonArrayRequestWithMethod extends JsonRequest<JSONArray> {
 
     /**
      * Creates a new request.
+     * @param method
      * @param url URL to fetch the JSON from
      * @param listener Listener to receive the JSON response
      * @param errorListener Error listener, or null to ignore errors.
      */
-    public JsonArrayPostRequest(String url,JSONObject jsonRequest, Response.Listener<JSONArray> listener, Response.ErrorListener errorListener) {
-        super(Method.POST, url, (jsonRequest == null) ? null : jsonRequest.toString(), listener, errorListener);
+    public JsonArrayRequestWithMethod(int method, String url, JSONObject jsonRequest, Response.Listener<JSONArray> listener, Response.ErrorListener errorListener) {
+        super(method, url, (jsonRequest == null) ? null : jsonRequest.toString(), listener, errorListener);
     }
 
     @Override
